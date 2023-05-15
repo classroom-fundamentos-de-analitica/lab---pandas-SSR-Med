@@ -188,8 +188,9 @@ def pregunta_11():
         lista = x.split(",")
         lista.sort()
         return ",".join(lista)
-
     tblB["_c4"] = tblB["_c4"].apply(order)
+    tblc = pd.DataFrame(data={"_c0": list(range(40)),
+                        "_c4": tblB["_c4"].tolist()})
 
     """
     Construya una tabla que contenga _c0 y una lista separada por ',' de los valores de
@@ -206,7 +207,7 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    return tblB
+    return tblc
 
 
 def pregunta_12():
@@ -221,6 +222,8 @@ def pregunta_12():
         return ",".join(lista)
 
     tblB["_c5"] = tblB["_c5"].apply(order)
+    tblc = pd.DataFrame(data={"_c0": list(range(40)),
+                        "_c5": tblB["_c5"].tolist()})
     """
     Construya una tabla que contenga _c0 y una lista separada por ',' de los valores de
     la columna _c5a y _c5b (unidos por ':') de la tabla `tbl2.tsv`.
@@ -235,7 +238,7 @@ def pregunta_12():
     38   38                    eee:0,fff:9,iii:2
     39   39                    ggg:3,hhh:8,jjj:5
     """
-    return tblB
+    return tblc
 
 
 def pregunta_13():
